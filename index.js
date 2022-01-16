@@ -26,14 +26,14 @@ function load_types()
 	for (const type in types)
 	{
 		// Generate the row for the new type
-		let row = "<tr id='row-" + i + "'><td><img src='img/type/sm/" + type + ".png'></img></td>" + 
-			"<td id='" + i + "-0'> 0 </td>" + 
-			"<td id='" + i + "-1'> 0 </td>" +
-			"<td id='" + i + "-2'> 0 </td>" +
-			"<td id='" + i + "-3'> 0 </td>" +
-			"<td id='" + i + "-4'> 0 </td>" +
-			"<td id='" + i + "-5'> 0 </td>" +
-			"<td id='" + i + "-rating'> No Rating </td>" +
+		let row = "<tr id='row-" + i + "'><td class='py-1'><img src='img/type/sm/" + type + ".png'></img></td>" +
+			"<td class='py-1' id='" + i + "-0'> 0 </td>" +
+			"<td class='py-1' id='" + i + "-1'> 0 </td>" +
+			"<td class='py-1' id='" + i + "-2'> 0 </td>" +
+			"<td class='py-1' id='" + i + "-3'> 0 </td>" +
+			"<td class='py-1' id='" + i + "-4'> 0 </td>" +
+			"<td class='py-1' id='" + i + "-5'> 0 </td>" +
+			"<td class='py-1' id='" + i + "-rating'> No Rating </td>" +
 			"</tr>";
 			
 		// Add the new row to the table
@@ -130,9 +130,9 @@ function add_pokemon(set = null)
 	ctrl.id = 'pkmn-' + id + '-ctrl';
 	
 	// Set the control row content
-	ctrl.innerHTML = "<td colspan=2><div class='row'>" + 
-		"<button id='pkmn-rmov-" + id + "' class='col btn btn-danger ml-3 mr-1 mt-1' onClick='rmv_pokemon(" + id + ")'>Remove Pokemon</button>" + 
-		"<button id='pkmn-hide-" + id + "' class='col btn btn-warning mr-3 ml-1 mt-1' onClick='toggle_moves(" + id + ")'>Show Moves</button>" + 
+	ctrl.innerHTML = "<td class='py-0' colspan=2><div class='row'>" + 
+		"<button id='pkmn-rmov-" + id + "' class='col btn btn-danger ml-3 mr-1 btn-sm' onClick='rmv_pokemon(" + id + ")'>Remove Pokemon</button>" +
+		"<button id='pkmn-hide-" + id + "' class='col btn btn-warning mr-3 ml-1 btn-sm' onClick='toggle_moves(" + id + ")'>Show Moves</button>" +
 		"</div></td>";
 		
 	// Add the control row to the form
